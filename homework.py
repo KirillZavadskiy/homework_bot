@@ -4,7 +4,6 @@ import os
 import requests
 import sys
 import telegram
-import tg_logger
 import time
 
 from dotenv import load_dotenv
@@ -38,7 +37,6 @@ handler = StreamHandler(stream=sys.stdout)
 handler.setFormatter(
     Formatter(fmt='[%(asctime)s : %(levelname)s] - %(message)s')
 )
-tg_logger.setup(logger, token=TELEGRAM_TOKEN, users=[TELEGRAM_CHAT_ID])
 logger.addHandler(handler)
 
 
