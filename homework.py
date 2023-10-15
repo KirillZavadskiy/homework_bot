@@ -43,7 +43,7 @@ logger.addHandler(handler)
 
 
 def check_tokens():
-    '''Проверяет доступность переменных окружения.'''
+    """Проверяет доступность переменных окружения."""
     if TELEGRAM_TOKEN is None:
         logging.critical('No variable TELEGRAM_TOKEN.')
         sys.exit()
@@ -56,7 +56,7 @@ def check_tokens():
 
 
 def send_message(bot, message):
-    '''Отправляет сообщение в Telegram чат.'''
+    """Отправляет сообщение в Telegram чат."""
     try:
         bot.send_message(chat_id=TELEGRAM_CHAT_ID, text=message)
         logging.debug('Message sent')
@@ -66,7 +66,7 @@ def send_message(bot, message):
 
 
 def get_api_answer(timestamp):
-    '''Делает запрос к эндпоинту API-сервиса.'''
+    """Делает запрос к эндпоинту API-сервиса."""
     payload = {'from_date': timestamp}
     try:
         hw_status = requests.get(
@@ -84,7 +84,7 @@ def get_api_answer(timestamp):
 
 
 def check_response(response):
-    '''Проверяет ответ API на соответствие документации.'''
+    """Проверяет ответ API на соответствие документации."""
     if not isinstance(response, dict):
         logger.error('Tyrpe of response not dict')
         logging.error('Tyrpe of response not dict')
@@ -103,7 +103,7 @@ def check_response(response):
 
 
 def parse_status(homework):
-    '''Извлекает из информации о конкретной домашней работе статус работы.'''
+    """Извлекает из информации о конкретной домашней работе статус работы."""
     if 'homework_name' not in homework or 'status' not in homework:
         logging.error('Missing expected keys in API')
         logger.error('Missing expected keys in API')
