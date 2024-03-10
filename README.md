@@ -1,5 +1,5 @@
 # homework_bot
-![bot](https://github.com/KirillZavadskiy/homework_bot/assets/130847000/2bbad6c2-6f7a-4f29-9338-aa8dbef364db)
 Telegram бот, в который приходит уведомление об изменении статуса проверки проекта на учебном сервисе Яндекс практикум.
 Так же на данный бот подключены проекты, при успешном выполнении коммита приходит сообщение с информацией о коммите - автор коммита, -m коммита, ссылка на коммит.
 @hwyaprabot
+![bot](https://github.com/KirillZavadskiy/homework_bot/assets/130847000/2bbad6c2-6f7a-4f29-9338-aa8dbef364db)
